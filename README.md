@@ -1,6 +1,8 @@
 # ATRBVH
 Agglomerative Treelet Restructuring Bounding Volume Hierarchy
+
 Copyright 2015 Leonardo Rodrigo Domingues
+
 
 This repository contains the full implementation for ATRBVH, as described in:
 
