@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AgglomerativeScheduler.cpp" />
+    <ClCompile Include="src\AgglomerativeTreeletOptimizer.cpp" />
+    <ClCompile Include="src\BVHCollapsedTree.cpp" />
+    <ClCompile Include="src\BVHTreeCollapser.cpp" />
+    <ClCompile Include="src\CudaTimer.cpp" />
+    <ClCompile Include="src\LBVHBuilder.cpp" />
+    <ClCompile Include="src\TRBVHOptimizer.cpp" />
+    <ClCompile Include="src\TRBVHScheduler.cpp" />
+    <ClCompile Include="src\SceneWrapper.cpp" />
+    <ClCompile Include="src\SoABVHTree.cpp" />
+    <ClCompile Include="src\BVHTreeInstanceManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AgglomerativeScheduler.h" />
+    <ClInclude Include="src\AgglomerativeTreelet.h" />
+    <ClInclude Include="src\AgglomerativeTreeletOptimizer.h" />
+    <ClInclude Include="src\BVHCollapsedTree.h" />
+    <ClInclude Include="src\BVHOptimizer.h" />
+    <ClInclude Include="src\BVHTree.h" />
+    <ClInclude Include="src\BVHTreeCollapser.h" />
+    <ClInclude Include="src\BVHTreeInstanceManager.h" />
+    <ClInclude Include="src\Commons.cuh" />
+    <ClInclude Include="src\CubWrapper.h" />
+    <ClInclude Include="src\CudaErrorCheck.h" />
+    <ClInclude Include="src\CudaTimer.h" />
+    <ClInclude Include="src\Defines.h" />
+    <ClInclude Include="src\LBVH.h" />
+    <ClInclude Include="src\LBVHBuilder.h" />
+    <ClInclude Include="src\TimeKernelExecution.h" />
+    <ClInclude Include="src\TRBVH.h" />
+    <ClInclude Include="src\TRBVHOptimizer.h" />
+    <ClInclude Include="src\TRBVHScheduler.h" />
+    <ClInclude Include="src\TreeCollapser.h" />
+    <ClInclude Include="src\Treelet.cuh" />
+    <ClInclude Include="src\Scene.h" />
+    <ClInclude Include="src\BVHBuilder.h" />
+    <ClInclude Include="src\SceneWrapper.h" />
+    <ClInclude Include="src\SoABVHTree.h" />
+    <ClInclude Include="src\TriangularMatrix.cuh" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="src\AgglomerativeTreelet.cu" />
+    <CudaCompile Include="src\CubWrapper.cu" />
+    <CudaCompile Include="src\LBVH.cu" />
+    <CudaCompile Include="src\TRBVH.cu" />
+    <CudaCompile Include="src\TreeCollapser.cu" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C0600862-C836-4D39-AE99-5230A2CB7402}</ProjectGuid>
+    <RootNamespace>BVHRT_Core</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 6.5.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\Dependencies\cub-1.3.2\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\Dependencies\cub-1.3.2\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>..\Dependencies\cub-1.3.2\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>..\Dependencies\cub-1.3.2\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <GenerateRelocatableDeviceCode>false</GenerateRelocatableDeviceCode>
+      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+      <Include>
+      </Include>
+    </CudaCompile>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CUDA_PATH)\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+      <GenerateRelocatableDeviceCode>false</GenerateRelocatableDeviceCode>
+    </CudaCompile>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CUDA_PATH)\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 6.5.targets" />
+  </ImportGroup>
+</Project>

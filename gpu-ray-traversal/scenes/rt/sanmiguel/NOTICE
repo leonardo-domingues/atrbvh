@@ -1,0 +1,6 @@
+This scene was created by Guillermo M. Leal Llaguno (g.llaguno@evvisual.com)
+of Evolucion Visual (www.evvisual.com), based on a hacienda that he visited in
+San Miguel de Allende, Mexico. The scene was modeled in 3ds max and exported
+to the pbrt file format with a custom script written by Guillermo. The pbrt
+model was further converted to Wavefront OBJ file format by Tero Karras
+(tkarras@nvidia.com) using a custom exporter.

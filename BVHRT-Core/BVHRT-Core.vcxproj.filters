@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\SoABVHTree.cpp" />
+    <ClCompile Include="src\LBVHBuilder.cpp" />
+    <ClCompile Include="src\SceneWrapper.cpp" />
+    <ClCompile Include="src\BVHTreeInstanceManager.cpp" />
+    <ClCompile Include="src\AgglomerativeTreeletOptimizer.cpp" />
+    <ClCompile Include="src\CudaTimer.cpp" />
+    <ClCompile Include="src\TRBVHOptimizer.cpp" />
+    <ClCompile Include="src\TRBVHScheduler.cpp" />
+    <ClCompile Include="src\BVHTreeCollapser.cpp" />
+    <ClCompile Include="src\BVHCollapsedTree.cpp" />
+    <ClCompile Include="src\AgglomerativeScheduler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\BVHTree.h" />
+    <ClInclude Include="src\CudaErrorCheck.h" />
+    <ClInclude Include="src\SoABVHTree.h" />
+    <ClInclude Include="src\LBVHBuilder.h" />
+    <ClInclude Include="src\BVHBuilder.h" />
+    <ClInclude Include="src\SceneWrapper.h" />
+    <ClInclude Include="src\BVHTreeInstanceManager.h" />
+    <ClInclude Include="src\Commons.cuh">
+      <Filter>device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LBVH.h">
+      <Filter>device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Defines.h" />
+    <ClInclude Include="src\Scene.h" />
+    <ClInclude Include="src\BVHOptimizer.h" />
+    <ClInclude Include="src\TimeKernelExecution.h">
+      <Filter>device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CubWrapper.h">
+      <Filter>device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AgglomerativeTreelet.h">
+      <Filter>device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AgglomerativeTreeletOptimizer.h" />
+    <ClInclude Include="src\CudaTimer.h" />
+    <ClInclude Include="src\TRBVH.h">
+      <Filter>device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TRBVHOptimizer.h" />
+    <ClInclude Include="src\TRBVHScheduler.h" />
+    <ClInclude Include="src\TreeCollapser.h">
+      <Filter>device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BVHTreeCollapser.h" />
+    <ClInclude Include="src\BVHCollapsedTree.h" />
+    <ClInclude Include="src\AgglomerativeScheduler.h" />
+    <ClInclude Include="src\TriangularMatrix.cuh">
+      <Filter>device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Treelet.cuh">
+      <Filter>device</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="device">
+      <UniqueIdentifier>{c09b26f6-9e47-46b0-9e8d-d1341031d68a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="src\LBVH.cu">
+      <Filter>device</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\CubWrapper.cu">
+      <Filter>device</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\AgglomerativeTreelet.cu">
+      <Filter>device</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\TRBVH.cu">
+      <Filter>device</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\TreeCollapser.cu">
+      <Filter>device</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,145 @@
+
+-------------------------------------------------------------------------
+Published results, in millions of rays per second.
+-------------------------------------------------------------------------
+
+HPG 2009 paper (GTX285):
+
+    Conference                                primary   AO        diffuse
+    ---                                       ---       ---       ---
+    tesla_persistent_packet                   122.1     86.1      32.3
+    tesla_persistent_speculative_while_while  142.2     134.5     60.9
+    tesla_persistent_while_while              135.6     130.7     62.4
+    ---                                       ---       ---       ---
+    Fairyforest                               primary   AO        diffuse
+    ---                                       ---       ---       ---
+    tesla_persistent_packet                   67.2      65.6      21.5
+    tesla_persistent_speculative_while_while  74.6      92.5      40.8
+    tesla_persistent_while_while              70.5      85.3      39.1
+    ---                                       ---       ---       ---
+    Sibenik                                   primary   AO        diffuse
+    ---                                       ---       ---       ---
+    tesla_persistent_packet                   100.6     83.7      27.3
+    tesla_persistent_speculative_while_while  117.5     119.6     46.8
+    tesla_persistent_while_while              117.5     113.4     48.1
+    
+    
+Technical report (GTX285, GTX480, GTX680):
+
+    Conference                                primary   AO        diffuse
+    ---                                       ---       ---       ---
+    tesla_persistent_speculative_while_while  142.2     134.5     60.9
+    fermi_speculative_while_while             272.1     284.1     126.1
+    kepler_dynamic_fetch                      432.6     518.2     245.4
+    ---                                       ---       ---       ---
+    Fairyforest                               primary   AO        diffuse
+    ---                                       ---       ---       ---
+    tesla_persistent_speculative_while_while  74.6      92.5      40.8
+    fermi_speculative_while_while             154.6     163.6     73.2
+    kepler_dynamic_fetch                      250.8     317.6     156.6
+    ---                                       ---       ---       ---
+    Sibenik                                   primary   AO        diffuse
+    ---                                       ---       ---       ---
+    tesla_persistent_speculative_while_while  117.5     119.6     46.8
+    fermi_speculative_while_while             243.4     244.1     94.7
+    kepler_dynamic_fetch                      388.2     441.2     192.5
+    ---                                       ---       ---       ---
+    Sanmiguel                                 primary   AO        diffuse
+    ---                                       ---       ---       ---
+    fermi_speculative_while_while             76.9      94.5      33.3
+    kepler_dynamic_fetch                      131.7     187.9     58.8
+
+
+-------------------------------------------------------------------------
+Expected results of running benchmark.cmd on different GPUs and CUDA
+versions. The numbers differ slightly from the published ones, mainly
+due to noise as well as minor differences in the test setup.
+-------------------------------------------------------------------------
+
+GeForce GTX 285, CUDA 3.1, 32-bit build:
+
+    Conference                                primary   AO        diffuse
+    ---                                       ---       ---       ---
+    fermi_speculative_while_while             75.72     77.35     37.97
+    tesla_persistent_packet                   123.82    95.64     39.11
+    tesla_persistent_speculative_while_while  139.06    147.42    77.44
+    tesla_persistent_while_while              131.52    146.88    74.80
+    ---                                       ---       ---       ---
+    Fairyforest                               primary   AO        diffuse
+    ---                                       ---       ---       ---
+    fermi_speculative_while_while             47.04     49.34     22.34
+    tesla_persistent_packet                   70.49     63.90     17.70
+    tesla_persistent_speculative_while_while  77.48     88.39     42.28
+    tesla_persistent_while_while              72.97     88.89     39.21
+    ---                                       ---       ---       ---
+    Sibenik                                   primary   AO        diffuse
+    ---                                       ---       ---       ---
+    fermi_speculative_while_while             80.19     71.55     30.12
+    tesla_persistent_packet                   103.82    89.63     31.76
+    tesla_persistent_speculative_while_while  112.68    121.58    53.67
+    tesla_persistent_while_while              112.93    120.70    53.31
+
+
+GeForce GTX 480, CUDA 4.2, 64-bit build:
+
+    Conference                                primary   AO        diffuse   
+    ---                                       ---       ---       ---       
+    fermi_speculative_while_while             268.60    283.57    127.28    
+    kepler_dynamic_fetch                      154.49    193.56    96.47     
+    tesla_persistent_packet                   144.64    108.52    41.29     
+    tesla_persistent_speculative_while_while  200.74    222.14    112.65    
+    tesla_persistent_while_while              183.42    194.19    92.60     
+    ---                                       ---       ---       ---       
+    Fairyforest                               primary   AO        diffuse   
+    ---                                       ---       ---       ---       
+    fermi_speculative_while_while             151.12    164.18    73.21     
+    kepler_dynamic_fetch                      90.26     118.67    62.37     
+    tesla_persistent_packet                   83.73     73.45     18.86     
+    tesla_persistent_speculative_while_while  109.97    134.71    66.58     
+    tesla_persistent_while_while              93.75     112.98    48.56     
+    ---                                       ---       ---       ---       
+    Sibenik                                   primary   AO        diffuse   
+    ---                                       ---       ---       ---       
+    fermi_speculative_while_while             247.21    249.57    98.41     
+    kepler_dynamic_fetch                      143.13    164.93    76.11     
+    tesla_persistent_packet                   127.86    105.83    34.28     
+    tesla_persistent_speculative_while_while  169.95    187.97    86.50     
+    tesla_persistent_while_while              159.11    159.80    66.98     
+    ---                                       ---       ---       ---       
+    Sanmiguel                                 primary   AO        diffuse   
+    ---                                       ---       ---       ---       
+    fermi_speculative_while_while             76.72     98.11     34.26     
+    kepler_dynamic_fetch                      53.43     80.27     34.44     
+
+
+GeForce GTX 680, CUDA 4.2, 64-bit build:
+
+    Conference                                primary   AO        diffuse   
+    ---                                       ---       ---       ---       
+    fermi_speculative_while_while             364.98    386.44    173.40    
+    kepler_dynamic_fetch                      397.00    490.27    245.60    
+    tesla_persistent_packet                   106.68    81.68     30.11     
+    tesla_persistent_speculative_while_while  237.86    270.23    123.84    
+    tesla_persistent_while_while              247.50    282.40    121.22    
+    ---                                       ---       ---       ---       
+    Fairyforest                               primary   AO        diffuse   
+    ---                                       ---       ---       ---       
+    fermi_speculative_while_while             203.26    224.26    95.72     
+    kepler_dynamic_fetch                      246.35    315.46    154.75    
+    tesla_persistent_packet                   65.02     54.21     13.47     
+    tesla_persistent_speculative_while_while  138.04    157.57    73.52     
+    tesla_persistent_while_while              143.38    164.10    65.39     
+    ---                                       ---       ---       ---       
+    Sibenik                                   primary   AO        diffuse   
+    ---                                       ---       ---       ---       
+    fermi_speculative_while_while             360.82    348.76    132.24    
+    kepler_dynamic_fetch                      372.85    447.67    194.96    
+    tesla_persistent_packet                   96.61     80.02     24.97     
+    tesla_persistent_speculative_while_while  215.99    238.97    99.02     
+    tesla_persistent_while_while              233.27    246.24    92.83     
+    ---                                       ---       ---       ---       
+    Sanmiguel                                 primary   AO        diffuse   
+    ---                                       ---       ---       ---       
+    fermi_speculative_while_while             98.21     128.64    39.70     
+    kepler_dynamic_fetch                      125.73    193.91    61.11     
+

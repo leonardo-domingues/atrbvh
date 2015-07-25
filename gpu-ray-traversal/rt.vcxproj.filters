@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="bvh">
+      <UniqueIdentifier>{71872d8d-a305-4e52-8848-baf034a82660}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cuda">
+      <UniqueIdentifier>{82320b35-4c68-416e-a413-91a010154eea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kernels">
+      <UniqueIdentifier>{342d34a4-9d21-4559-8e4b-33dfbc57d47f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ray">
+      <UniqueIdentifier>{3920db06-697c-4abf-a3ec-ed1c06b94c0c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\rt\bvh\BVH.cpp">
+      <Filter>bvh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rt\bvh\BVHNode.cpp">
+      <Filter>bvh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rt\bvh\Platform.cpp">
+      <Filter>bvh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rt\bvh\SplitBVHBuilder.cpp">
+      <Filter>bvh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rt\cuda\CudaBVH.cpp">
+      <Filter>cuda</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rt\cuda\CudaTracer.cpp">
+      <Filter>cuda</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rt\cuda\Renderer.cpp">
+      <Filter>cuda</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rt\ray\PixelTable.cpp">
+      <Filter>ray</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rt\ray\RayBuffer.cpp">
+      <Filter>ray</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rt\ray\RayGen.cpp">
+      <Filter>ray</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rt\Scene.cpp" />
+    <ClCompile Include="src\rt\Util.cpp" />
+    <ClCompile Include="src\rt\App.cpp" />
+    <ClCompile Include="src\rt\SceneConverter.cpp" />
+    <ClCompile Include="src\rt\BVHRTSettings.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\rt\bvh\BVH.hpp">
+      <Filter>bvh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\bvh\BVHNode.hpp">
+      <Filter>bvh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\bvh\Platform.hpp">
+      <Filter>bvh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\bvh\SplitBVHBuilder.hpp">
+      <Filter>bvh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\cuda\CudaBVH.hpp">
+      <Filter>cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\cuda\CudaTracer.hpp">
+      <Filter>cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\cuda\Renderer.hpp">
+      <Filter>cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\cuda\RendererKernels.hpp">
+      <Filter>cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\kernels\CudaTracerKernels.hpp">
+      <Filter>kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\ray\PixelTable.hpp">
+      <Filter>ray</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\ray\RayBuffer.hpp">
+      <Filter>ray</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\ray\RayBufferKernels.hpp">
+      <Filter>ray</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\ray\RayGen.hpp">
+      <Filter>ray</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\ray\RayGenKernels.hpp">
+      <Filter>ray</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rt\Scene.hpp" />
+    <ClInclude Include="src\rt\Util.hpp" />
+    <ClInclude Include="src\rt\App.hpp" />
+    <ClInclude Include="src\rt\SceneConverter.h" />
+    <ClInclude Include="src\rt\BVHRTSettings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="src\rt\cuda\RendererKernels.cu">
+      <Filter>cuda</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="src\rt\kernels\fermi_speculative_while_while.cu">
+      <Filter>kernels</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="src\rt\kernels\tesla_persistent_packet.cu">
+      <Filter>kernels</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="src\rt\kernels\tesla_persistent_speculative_while_while.cu">
+      <Filter>kernels</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="src\rt\kernels\tesla_persistent_while_while.cu">
+      <Filter>kernels</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="src\rt\ray\RayBufferKernels.cu">
+      <Filter>ray</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="src\rt\ray\RayGenKernels.cu">
+      <Filter>ray</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\rt\kernels\kepler_dynamic_fetch.cu">
+      <Filter>kernels</Filter>
+    </None>
+  </ItemGroup>
+</Project>

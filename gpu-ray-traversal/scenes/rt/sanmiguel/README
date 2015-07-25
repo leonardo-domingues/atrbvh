@@ -1,0 +1,1 @@
+If the application crashes while rendering this scene, it is possible that the GPU that is being used does not have enough memory to generate all the necessary structures. The BVH for this structure could not be generated using a GTX 770 for this reason.

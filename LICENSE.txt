@@ -1,0 +1,5 @@
+This repository contains files from different projects, release under different licenses. Please check each folder for the presence of a 'LICENSE' or 'LICENSE.txt' file.
+
+-ATRBVH, TRBVH and LBVH implementations are available in the 'BVHRT-Core' folder, and their license is described in 'BVHRT-Core/LICENSE.txt'
+-CUB 1.3.2 is available in the 'Dependencies/cub-1.3.2' folder, and its license is described in 'Dependencies/cub-1.3.2/LICENSE.TXT'
+-Fast GPU Ray Traversal 1.4 is available in the 'gpu-ray-traversal' folder, and its license is described in 'gpu-ray-traversal/LICENSE'
